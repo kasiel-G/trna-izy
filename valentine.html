@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My valentine</title>
+    <style>
+        /* styles.css */
+.A
+{
+    align-items: center;
+    display: inline-flex;
+}    
+/* styles.css */
+
+.heart {
+    color: #ff69b4; /* Couleur rose */
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+
+.container
+ {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.animated-image
+ {
+    width: 100px;
+    height: auto;
+    animation: heartbeat 2s infinite alternate;
+}
+
+@keyframes heartbeat
+ {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+.btn-no {
+    background-color: red; /* Couleur rouge pour "non" */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Espacement entre l'image et le bouton */
+}
+
+.btn-no:hover {
+    background-color: darkgray; /* Couleur plus foncée au survol */
+}
+.btn-yes {
+    background-color: green; /* Couleur rouge pour "non" */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Espacement entre l'image et le bouton */
+}
+
+.btn-yes:hover {
+    background-color: cyan; /* Couleur plus foncée au survol */
+}
+.B 
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff69b4;
+}
+
+    </style>
+</head>
+<body>
+
+</head>
+<body>
+    <div class="A">
+        <h1 class="B">Would You Be My Valentine? <span class="heart">❤️</span></h1>
+    </div> 
+    <div class="container">
+        <img src="chat qui pleure.jpg" alt="Chat pleurant" class="animated-image" id="myImg">
+        <button class="btn-no" onclick="agrandir()">Non :(</button>
+        <img src="holding heart.gif" alt="Chat avec un cœur" class="animated-image">
+        <button class="btn-yes" onclick="btn_yes()">Yes</button>
+    </div>
+</body>
+<script>
+        function agrandir() {
+            var myImg = document.getElementById("myImg");
+            var currentWidth = myImg.clientWidth;
+            var newWidth = currentWidth * 1.30; // Augmenter de 15%
+            myImg.style.width = newWidth + "px";
+        }
+        function btn_yes() {
+        window.location.href = "Momoa.html";
+        }
+</script>
+</html>
